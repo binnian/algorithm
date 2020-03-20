@@ -1,4 +1,4 @@
-package org.example;
+package com.benonshi;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,4 +33,5 @@ public class LengthOfLongestSubstring {
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstring("lockkersty"));
     }
+
 }

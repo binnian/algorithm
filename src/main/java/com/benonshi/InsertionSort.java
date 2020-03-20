@@ -1,4 +1,4 @@
-package org.example;
+package com.benonshi;
 
 /**
  * 插入排序

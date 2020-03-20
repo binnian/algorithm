@@ -1,4 +1,4 @@
-package org.example;
+package com.benonshi;
 
 /**
  * 237. 删除链表中的节点
