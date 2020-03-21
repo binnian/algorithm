@@ -9,7 +9,7 @@ package com.benonshi;
  */
 public class SelectionSort {
     public static void main(String[] args) {
-        int[] arr = {9, 6, 4, 1, 7, 3, 8};
+        int[] arr = {9, 6, 4, 1, 7, 3, 8,15,11};
         for (int i = 0; i < arr.length - 1; i++) {
             //定义数组
             int min = i;
