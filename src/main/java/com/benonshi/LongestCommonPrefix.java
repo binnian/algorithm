@@ -1,6 +1,6 @@
 package com.benonshi;
 
-import java.util.*;
+
 
 /**
  * 14. 最长公共前缀
@@ -35,9 +35,7 @@ public class LongestCommonPrefix {
     }
 
     public static void main(String[] args) {
-        String s = longestCommonPrefix(new String[]{"flow", "fl", "f"});
-        System.out.println(s);
-        Map<Integer, Integer> map = new HashMap();
-
+        System.out.println("longestCommonPrefix(new String[]{\"flow\", \"fl\", \"f\"}) = "
+                + longestCommonPrefix(new String[]{"flow", "fl", "f"}));
     }
 }
