@@ -1,4 +1,4 @@
-package com.benonshi;
+package com.benonshi.array;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,10 +27,14 @@ public class TwoSum {
             return new int[]{};
         }
         Map<Integer, Integer> map = new HashMap<>();
+        // arr[0] 开始
         for (int i = 0; i < nums.length; i++) {
+            // 循环过程中  如果 target - arr[i] 位置的值 在map中存在
             if (map.containsKey(target - nums[i])) {
+                //返回一个新的数组  target - nums[i] 就是 之前存入的 key
                 return new int[]{map.get(target - nums[i]), i};
             }
+            // 将 数组的值作为 key  下标作为 value  放入map
             map.put(nums[i], i);
         }
         return null;

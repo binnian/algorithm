@@ -1,10 +1,11 @@
-package com.benonshi;
+package com.benonshi.array;
 
 /**
+ * 反转数组
  * @author BenOniShi
  * @date 2020/3/25 19:23
  */
-public class ArrayReverse {
+public class ReverseArray {
 
     public static void reverse(int[] arr, int lo, int hi) {
         if (lo < hi) {
@@ -30,7 +31,6 @@ public class ArrayReverse {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 3, 4, 5, 6};
         reverse(arr, 0, arr.length-1);
-        reverse(arr);
         for (int i : arr) {
             System.out.println(i);
         }

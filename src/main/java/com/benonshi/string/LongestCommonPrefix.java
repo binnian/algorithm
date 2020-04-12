@@ -1,4 +1,4 @@
-package com.benonshi;
+package com.benonshi.string;
 
 
 

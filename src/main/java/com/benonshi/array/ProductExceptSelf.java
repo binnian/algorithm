@@ -1,4 +1,4 @@
-package com.benonshi;
+package com.benonshi.array;
 
 import java.util.HashMap;
 import java.util.Map;
