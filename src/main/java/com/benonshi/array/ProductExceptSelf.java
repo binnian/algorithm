@@ -14,11 +14,17 @@ import java.util.Map;
  */
 public class ProductExceptSelf {
     public static int[] productExceptSelf(int[] nums) {
-        Map<Integer, Integer> map = new HashMap();
+        Map<Integer, Integer> map = new HashMap(nums.length);
         for (int i = 0; i < nums.length; i++) {
             map.put(nums[i], i);
         }
         int[] arr = new int[nums.length];
+        map.forEach((k, v) -> {
+
+        });
+
+
+
         for (int i = 0; i < nums.length; i++) {
             int sum = 1;
             for (int j : map.keySet()) {

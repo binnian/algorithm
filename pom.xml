@@ -26,11 +26,13 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.jetbrains</groupId>
-      <artifactId>annotations</artifactId>
-      <version>19.0.0</version>
-      <scope>compile</scope>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.10</version>
     </dependency>
+
+
+
   </dependencies>
 
   <build>

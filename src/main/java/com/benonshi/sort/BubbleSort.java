@@ -17,47 +17,38 @@ public class BubbleSort {
             for (int i = 1; i < n; i++) {
                 // 如果 i -1 位置 大于  i  交换  并且将 sorted 置为 false
                 if (arr[i - 1] > arr[i]) {
-                    int temp = arr[i];
-                    arr[i] = arr[i - 1];
-                    arr[i - 1] = temp;
+                    SortUtils.swap(arr, i, i - 1);
                     sorted = false;
                 }
             }
+
         }
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
 
 
-
-
-        for (int i = arr.length - 1; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                if (arr[j] > arr[i]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-
-
-
-
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[i]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
+//        for (int i = arr.length - 1; i > 0; i--) {
+//            for (int j = 0; j < i; j++) {
+//                if (arr[j] > arr[i]) {
+//                    SortUtils.swap(arr, i, j);
+//                }
+//            }
+//        }
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//
+//
+//        for (int i = 0; i < arr.length - 1; i++) {
+//            for (int j = i + 1; j < arr.length; j++) {
+//                if (arr[j] < arr[i]) {
+//                    SortUtils.swap(arr, i, i - 1);
+//                }
+//            }
+//        }
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
     }
 }
