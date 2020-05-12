@@ -1,4 +1,4 @@
-package com.benonshi.list;
+package com.benonshi.node;
 
 import com.benonshi.model.ListNode;
 
@@ -9,7 +9,7 @@ import com.benonshi.model.ListNode;
  */
 public class ReverseListNode {
 
-    public ListNode reverseList(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
         if (head == null || head.next ==null){
             return head;
         }
@@ -22,9 +22,7 @@ public class ReverseListNode {
 
     public static void main(String[] args) {
         ListNode listNode = new ListNode(1,new ListNode(2,new ListNode(3,new ListNode(4,null))));
-        ReverseListNode reverseList = new ReverseListNode();
-        ListNode head = reverseList.reverseList(listNode);
-        System.out.println(head);
+        System.out.println("ReverseListNode.reverseList(listNode) = " + ReverseListNode.reverseList(listNode));
     }
 
 }

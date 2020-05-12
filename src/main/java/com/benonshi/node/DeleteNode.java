@@ -1,4 +1,6 @@
-package com.benonshi.list;
+package com.benonshi.node;
+
+import com.benonshi.model.ListNode;
 
 /**
  * 237. 删除链表中的节点
@@ -13,16 +15,6 @@ package com.benonshi.list;
  * @date 2020/3/12 18:48
  */
 public class DeleteNode {
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      * 当前节点下一个的值赋值给当前节点 让当前节点的指针指向下一个节点的下一个节点
      *
