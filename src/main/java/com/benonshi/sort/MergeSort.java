@@ -1,6 +1,8 @@
 package com.benonshi.sort;
 
 
+import java.util.Random;
+
 /**
  * @author BenOniShi
  * @date 2020/5/11 23:25
@@ -9,7 +11,18 @@ public class MergeSort {
 
 
     public static void main(String[] args) {
-//        int[] arr = new int[]{95, 1, 5, 7, 9, 18, 1, 6, 22, 13, 15};
+        Random random = new Random();
+        int i = random.nextInt(10);
+        int[] arr = new int[100000000];
+        for (int j = 0; j < 100000000; j++) {
+            arr[j] = random.nextInt(1000000 + 1);
+        }
+        // 调用排序方法 传 数组  开始  轴
+        long l = System.currentTimeMillis();
+        sort(arr, 0, arr.length - 1);
+        long l1 = System.currentTimeMillis();
+        System.out.println(l1 - l);
+
 //
 //        sort(arr, 0, arr.length - 1);
 //        SortUtils.print(arr);
@@ -38,9 +51,7 @@ public class MergeSort {
         int j = rightPtr;
         int k = 0;
 
-        while (i <= mid && j <= rightBound) {
-            temp[k++] = arr[i] <= arr[j] ? arr[i++] : arr[j++];
-        }
+        while (i <= mid && j <= rightBound) temp[k++] = arr[i] <= arr[j] ? arr[i++] : arr[j++];
         while (i <= mid) temp[k++] = arr[i++];
         while (j <= rightBound) temp[k++] = arr[j++];
 

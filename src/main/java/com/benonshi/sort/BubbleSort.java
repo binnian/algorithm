@@ -1,5 +1,7 @@
 package com.benonshi.sort;
 
+import java.util.Random;
+
 /**
  * 冒泡排序
  *
@@ -8,8 +10,17 @@ package com.benonshi.sort;
  */
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] arr = {6, 9, 4, 1, 7, 3, 8};
+        Random random = new Random();
+        int[] arr = new int[100000000];
+        for (int j = 0; j < 100000000; j++) {
+            arr[j] = random.nextInt(1000000 + 1);
+        }
         int n = arr.length;
+
+        long l = System.currentTimeMillis();
+
+
+
 
         // sorted 为 false  sorted 置为 true  为真   n --
         for (boolean sorted = false; sorted = !sorted; n--) {
@@ -23,10 +34,9 @@ public class BubbleSort {
             }
 
         }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
 
+        long l1 = System.currentTimeMillis();
+        System.out.println(l1 - l);
 
 //        for (int i = arr.length - 1; i > 0; i--) {
 //            for (int j = 0; j < i; j++) {

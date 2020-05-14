@@ -13,6 +13,10 @@ public class ListNode {
         this.next = next;
     }
 
+    public ListNode(int i) {
+        this.val = i;
+    }
+
     @Override
     public String toString() {
         return "ListNode{" +

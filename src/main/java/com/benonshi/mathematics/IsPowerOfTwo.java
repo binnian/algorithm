@@ -1,7 +1,6 @@
 package com.benonshi.mathematics;
 
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
+
 
 /**
  * 231. 2的幂
@@ -14,8 +13,7 @@ import org.jetbrains.annotations.NotNull;
 public class IsPowerOfTwo {
 
 
-    @Contract(pure = true)
-    public static @NotNull Boolean isPowerOfTwo(int n) {
+    public static  Boolean isPowerOfTwo(int n) {
         return n > 0 && (n & (n - 1)) == 0;
     }
 
