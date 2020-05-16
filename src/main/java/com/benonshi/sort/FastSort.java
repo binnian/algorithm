@@ -14,16 +14,16 @@ public class FastSort {
     public static void main(String[] args) {
         Random random = new Random();
         int i = random.nextInt(10);
-        int[] arr = new int[100000000];
-        for (int j = 0; j < 100000000; j++) {
-            arr[j] = random.nextInt(1000000 + 1);
+        int[] arr = new int[1000];
+        for (int j = 0; j < 1000; j++) {
+            arr[j] = random.nextInt(1000 + 1);
         }
         // 调用排序方法 传 数组  开始  轴
         long l = System.currentTimeMillis();
         sort(arr, 0, arr.length - 1);
         long l1 = System.currentTimeMillis();
         System.out.println(Long.valueOf(l1 - l));
-//        SortUtils.print(arr);
+        SortUtils.print(arr);
 
     }
 
@@ -47,9 +47,9 @@ public class FastSort {
         int right = rightBound - 1;
         // 如果 左边小于 右边
         while (left <= right) {
-            // 如果左边 小于 右边   找 第一个小于等于轴的值得下标
+            // 如果左边 小于 右边   找 第一个大于等于轴的值得下标
             while (left <= right && arr[left] <= pivot) left++;
-            // 如果左边界 小于 有边界  找从右边开始即轴位置-1 开始 大于轴的值的下标
+            // 如果左边界 小于 有边界  找从右边开始即轴位置-1 开始 小于轴的值的下标
             while (left <= right && arr[right] > pivot) right--;
             // 如果左边界 小于 右边界
             if (left < right) {
