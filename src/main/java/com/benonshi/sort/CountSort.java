@@ -20,13 +20,16 @@ public class CountSort {
         // 返回结果数组
         int[] result = new int[arr.length];
         // 计数数组
-        int[] count = new int[24];
+        int[] count = new int[13];
         // 遍历原数组
         for (int i = 0; i < arr.length; i++) {
             //   要排序的数组的值是计数数组的小标  计数数组下标对应的值从0开始
             //   每找到一个同样的值  计数数组下标对应的值进行 +1 操作
             //   如 arr[0] 的值 是 9   则计数数组 count[9] 位置的值则为 1 每找到一个 对应计数数组的值则+1
             count[arr[i]]++;
+        }
+        for (int i : count) {
+            System.out.println(i);
         }
         //  遍历count 数组   两个变量i 和  j
         for (int i = 0, j = 0; i < count.length; i++) {
