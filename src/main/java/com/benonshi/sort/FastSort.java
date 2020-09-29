@@ -46,11 +46,11 @@ public class FastSort {
         int left = leftBound;
         // 右边
         int right = rightBound - 1;
-        // 如果 左边小于 右边
+        // 如果 左边小于等于 右边
         while (left <= right) {
-            // 如果左边 小于 右边   找 第一个大于等于轴的值得下标
+            // 如果左边 小于等于 右边    找 第一个大于等于轴的值得下标
             while (left <= right && arr[left] <= pivot) left++;
-            // 如果左边 小于 右边  找从右边开始即轴位置-1 开始 小于轴的值的下标
+            // 如果左边 小于等于 右边  找从右边开始即轴位置-1 开始 小于轴的值的下标
             while (left <= right && arr[right] > pivot) right--;
             // 如果左边界 小于 右边界
             if (left < right) {
