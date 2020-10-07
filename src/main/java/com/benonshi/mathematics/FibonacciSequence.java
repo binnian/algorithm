@@ -29,7 +29,7 @@ public class FibonacciSequence {
 
     public static void main(String[] args) {
         System.out.println(fib1(15));
-//        System.out.println(fib2(2));
+        System.out.println(fib2(15));
     }
 
 

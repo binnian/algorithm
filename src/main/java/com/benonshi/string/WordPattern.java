@@ -6,7 +6,8 @@ package com.benonshi.string;
  * 这里的 遵循 指完全匹配，例如， pattern 里的每个字母和字符串 str 中的每个非空单词之间存在着双向连接的对应规律。
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/word-pattern
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ * 输入: pattern = "abba", str = "dog cat cat dog"
+ * 输出: true
  * @Author: BenOnSHI
  * @Date: 2020/4/26 17:35
  **/
