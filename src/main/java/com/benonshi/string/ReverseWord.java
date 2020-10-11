@@ -6,23 +6,21 @@ package com.benonshi.string;
  */
 public class ReverseWord {
 
-    private static String str = "This  is a word";
 
-    public static void reverse() {
-        String[] s = str.split(" ");
+    public static String reverse(String s) {
+        String[] str = s.split(" ");
         StringBuilder strBuilder = new StringBuilder();
-        for (int i = s.length - 1; i >= 0; i--) {
+        for (int i = str.length - 1; i >= 0; i--) {
             if (i == 0) {
-                strBuilder.append(s[i]);
+                strBuilder.append(str[i]);
             } else {
-                strBuilder.append(s[i]).append(" ");
+                strBuilder.append(str[i]).append(" ");
             }
         }
-        str = strBuilder.toString();
+        return strBuilder.toString();
     }
 
     public static void main(String[] args) {
-        reverse();
-        System.out.println(str);
+        System.out.println(reverse("This  is a word"));
     }
 }
