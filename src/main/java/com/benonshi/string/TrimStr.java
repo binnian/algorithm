@@ -1,5 +1,7 @@
 package com.benonshi.string;
 
+import java.util.ArrayList;
+
 /**
  * 字符串去重
  *
