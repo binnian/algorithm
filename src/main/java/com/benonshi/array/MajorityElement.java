@@ -12,14 +12,18 @@ package com.benonshi.array;
  */
 public class MajorityElement {
     public static int majorityElement(int[] nums) {
+        //票数起始设置为1
         int num = 1;
+        //众数ans：初始值设置为数组的第一个元素
         int ans = nums[0];
         for (int i = 1; i < nums.length; i++) {
+            //判断nums[i]是否为众数ans：是 ==> num + 1；否 ==> num - 1
             if (nums[i] != ans) {
                 num--;
             } else {
                 num++;
             }
+            //判断票数num是否为0：为0则将当前遍历的元素e设置为众数ans
             if (num == 0) {
                 ans = nums[i];
                 num++;
@@ -29,6 +33,6 @@ public class MajorityElement {
     }
 
     public static void main(String[] args) {
-        System.out.println(majorityElement(new int[]{2,1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 4, 6, 6}));
+        System.out.println(majorityElement(new int[]{2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 4, 6, 6}));
     }
 }
