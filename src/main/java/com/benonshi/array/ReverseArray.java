@@ -32,7 +32,7 @@ public class ReverseArray {
         int[] arr = new int[]{1, 2, 3, 4, 5, 6};
         reverse(arr, 0, arr.length-1);
         for (int i : arr) {
-            System.out.println(i);
+            System.out.print(i);
         }
     }
 }
