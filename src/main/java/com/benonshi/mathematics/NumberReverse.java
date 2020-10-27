@@ -21,22 +21,26 @@ package com.benonshi.mathematics;
 public class NumberReverse {
 
     public static int reverse(int x) {
-        // 创建两个int 类型的变量
-        int n = 0, k = 0;
+        int n = 0;
         while (x != 0) {
             // k 是 x 取模得到的数
-            k = x % 10;
-            // x 不断除10
-            x /= 10;
+            int k = x % 10;
             // 如果超过边界
-            if (n >= Integer.MAX_VALUE || n <= Integer.MIN_VALUE) return 0;
+            if (n > Integer.MAX_VALUE / 10 || (n == Integer.MAX_VALUE / 10 && k > 7)) {
+                return 0;
+            }
+            if (n < Integer.MIN_VALUE / 10 || (n == Integer.MIN_VALUE / 10 && k < -8)) {
+                return 0;
+            }
             // n 即 每一次反转过来的数字 乘 10  加上 获取到的 k 值
             n = (n * 10) + k;
+            // x 不断除10
+            x /= 10;
         }
         return n;
     }
 
     public static void main(String[] args) {
-        System.out.println(reverse(1221351359));
+        System.out.println(reverse(1534236469));
     }
 }
