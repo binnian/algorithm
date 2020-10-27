@@ -17,6 +17,13 @@ public class ListNode {
         this.val = i;
     }
 
+    public static void printNode(ListNode node) {
+        while (node != null && node.next != null) {
+            System.out.print(node.val + " ");
+            node = node.next;
+        }
+    }
+
     @Override
     public String toString() {
         return "ListNode{" +
