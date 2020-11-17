@@ -23,7 +23,7 @@ public class TwoSum {
      * @return
      */
     public static int[] twoSum(int[] nums, int target) {
-        if (nums == null && nums.length == 0) {
+        if (nums == null || nums.length == 0) {
             return new int[]{};
         }
         Map<Integer, Integer> map = new HashMap<>();
