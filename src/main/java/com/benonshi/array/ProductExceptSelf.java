@@ -14,27 +14,20 @@ import java.util.Map;
  */
 public class ProductExceptSelf {
     public static int[] productExceptSelf(int[] nums) {
-        Map<Integer, Integer> map = new HashMap(nums.length);
+
+        int[] ints = new int[nums.length];
+
+        int k = 1;
         for (int i = 0; i < nums.length; i++) {
-            map.put(nums[i], i);
+            ints[i] = k;
+            k *= nums[i];
         }
-        int[] arr = new int[nums.length];
-        map.forEach((k, v) -> {
 
-        });
+        for (int i = nums.length - 1; i >= 0; i--) {
 
 
-
-        for (int i = 0; i < nums.length; i++) {
-            int sum = 1;
-            for (int j : map.keySet()) {
-                if (j != nums[i]) {
-                    sum = sum * j;
-                }
-            }
-            arr[i] = sum;
         }
-        return arr;
+        return ints;
     }
 
 
