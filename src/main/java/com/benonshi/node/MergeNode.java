@@ -3,6 +3,7 @@ package com.benonshi.node;
 import com.benonshi.model.ListNode;
 
 /**
+ * 合并两个链表
  * @author BenOniShi
  * @date 2020/10/27 22:01
  */
