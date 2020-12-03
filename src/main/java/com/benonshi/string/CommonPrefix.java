@@ -14,7 +14,7 @@ public class CommonPrefix {
             if (s1.charAt(i) != s2.charAt(i)) {
                 break;
             }
-            str = s1.substring(0, i);
+            str = s1.substring(0, i+1);
         }
         return str;
     }
