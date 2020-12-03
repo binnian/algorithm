@@ -12,7 +12,7 @@ public class GetKthFromEnd {
         if (head == null || head.next == null) {
             return null;
         }
-        // 定义双执政
+        // 定义双指针
         ListNode q = head;
         ListNode p = head;
         // 先让p 走 k 个元素
