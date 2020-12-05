@@ -29,6 +29,6 @@ public class ReverseWords {
     }
 
     public static void main(String[] args) {
-        System.out.println(reverseWords("I love u"));
+        System.out.println(reverseWords("Ia love ue"));
     }
 }
