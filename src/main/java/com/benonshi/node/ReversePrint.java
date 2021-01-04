@@ -10,13 +10,16 @@ import java.util.Stack;
  */
 public class ReversePrint {
     public static int[] reversePrint(ListNode head) {
+        //创建一个栈
         Stack<ListNode> stack = new Stack<>();
         while (head != null) {
+            //入栈
             stack.push(head);
             head = head.next;
         }
         int[] nums = new int[stack.size()];
         for (int i = 0; i < nums.length; i++) {
+            //出栈
             nums[i] = stack.pop().val;
         }
         return nums;
