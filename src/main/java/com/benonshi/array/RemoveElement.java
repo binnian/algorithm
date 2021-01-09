@@ -23,9 +23,10 @@ public class RemoveElement {
         for (int j = 0; j < nums.length; j++) {
             // 若 j != val 时  交换 j 与 i
             // j == val 时  j自增 i 原地不懂   当下一次 j != val 时 交换
-            // if (nums[j] != val) {
-            nums[i] = nums[j];
-            i++;
+            if (nums[j] != val) {
+                nums[i] = nums[j];
+                i++;
+            }
         }
         return i;
     }
