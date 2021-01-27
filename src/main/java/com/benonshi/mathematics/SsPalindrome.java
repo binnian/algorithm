@@ -11,18 +11,14 @@ public class SsPalindrome {
 
 
     public static boolean isPalindrome(int x) {
-        String s = String.valueOf(x);
-        if (s.contains("-")) {
-            return false;
+        if (x < 0) return false;
+        int cur = 0;
+        int num = x;
+        while (num != 0) {
+            cur = cur * 10 + num % 10;
+            num /= 10;
         }
-        int l = 0;
-        int len = s.length() - 1;
-        for (; l < len; l++, len--) {
-            if (s.charAt(l) != s.charAt(len)) {
-                return false;
-            }
-        }
-        return true;
+        return cur == x;
     }
 
     public static void main(String[] args) {
