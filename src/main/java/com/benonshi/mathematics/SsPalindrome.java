@@ -15,7 +15,9 @@ public class SsPalindrome {
         int cur = 0;
         int num = x;
         while (num != 0) {
+            //  模10 取余
             cur = cur * 10 + num % 10;
+            //  除10
             num /= 10;
         }
         return cur == x;
