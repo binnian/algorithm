@@ -9,12 +9,26 @@ package com.benonshi.array;
  **/
 public class FindMaxAverage {
 
-    public double findMaxAverage(int[] nums, int k) {
+    public static double findMaxAverage(int[] nums, int k) {
+        int len = nums.length;
+        int sum = 0;
+        for (int i = 0; i < k; i++) {
+            sum += nums[i];
+        }
+        int maxSum = sum;
+        int left = 0;
+        for (int i = k; i < len ; i++) {
+            sum = sum-nums[left++] + nums[i++];
+            maxSum = Math.max(maxSum, sum);
+        }
+        return maxSum*1.0 / k;
+    }
 
 
-
-
-        return 0 * 1.0;
+    public static void main(String[] args) {
+        int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10, 123, 5};
+        double maxAverage = findMaxAverage(nums, 2);
+        System.out.println(maxAverage);
     }
 
 }
