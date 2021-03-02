@@ -15,7 +15,7 @@ package com.benonshi.array;
  */
 public class PlusOne {
 
-    public int[] plusOne(int[] digits) {
+    public static int[] plusOne(int[] digits) {
 
         for (int i = digits.length - 1; i >= 0; i--) {
             digits[i]++;
@@ -28,5 +28,13 @@ public class PlusOne {
         int[] result = new int[digits.length + 1];
         result[0] = 1;
         return result;
+    }
+
+    public static void main(String[] args) {
+        int [] nums = new int[]{9,9,9,9,9,9,9,9,9};
+        int[] ints = plusOne(nums);
+        for (int anInt : ints) {
+            System.out.print(anInt);
+        }
     }
 }
