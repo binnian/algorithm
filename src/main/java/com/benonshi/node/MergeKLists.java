@@ -12,25 +12,24 @@ import com.benonshi.model.ListNode;
  **/
 public class MergeKLists {
 
-
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists.length == 0) {
             return null;
         }
-        return mergeList(lists, 0, lists.length - 1);
+        return mergeNodeList(lists, 0, lists.length - 1);
     }
 
-    public ListNode mergeList(ListNode[] lists, int i, int j) {
+    public ListNode mergeNodeList(ListNode[] lists, int i, int j) {
         if (i == j) {
             return lists[i];
         }
         int mid = i + (j - i) / 2;
-        ListNode l1 = mergeList(lists, i, mid);
-        ListNode l2 = mergeList(lists, mid + 1, j);
-        return mergeTwoList(l1, l2);
+        ListNode l1 = mergeNodeList(lists, i, mid);
+        ListNode l2 = mergeNodeList(lists, mid + 1, j);
+        return merge(l1, l2);
     }
 
-    public ListNode mergeTwoList(ListNode l1, ListNode l2) {
+    public ListNode merge(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;
         }
@@ -38,10 +37,10 @@ public class MergeKLists {
             return l1;
         }
         if (l1.val < l2.val) {
-            l1.next = mergeTwoList(l1.next, l2);
+            l1.next = merge(l1.next, l2);
             return l1;
         } else {
-            l2.next = mergeTwoList(l1, l2.next);
+            l2.next = merge(l1, l2.next);
             return l2;
         }
     }
