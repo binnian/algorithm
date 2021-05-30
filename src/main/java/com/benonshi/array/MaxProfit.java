@@ -16,7 +16,7 @@ package com.benonshi.array;
  **/
 public class MaxProfit {
 
-    public int maxProfit(int[] prices) {
+    public int maxProfit1(int[] prices) {
         if (prices.length < 2) {
             return 0;
         }
@@ -27,5 +27,18 @@ public class MaxProfit {
             else min = price;
         }
         return max;
+    }
+
+    public int maxProfit2(int[] prices) {
+        if (prices.length < 2) {
+            return 0;
+        }
+        int[] dp = new int[2];
+        dp[1] = -prices[0];
+        for (int i = 0; i < prices.length; i++) {
+            dp[0] = Math.max(dp[0], prices[i] + dp[1]);
+            dp[1] = Math.max(dp[1], -prices[i]);
+        }
+        return dp[0];
     }
 }
