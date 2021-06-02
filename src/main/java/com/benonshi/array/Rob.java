@@ -6,8 +6,6 @@ package com.benonshi.array;
  * <p>
  * 给定一个代表每个房屋存放金额的非负整数数组，计算你 不触动警报装置的情况下 ，一夜之内能够偷窃到的最高金额。
  * <p>
- *  
- * <p>
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/house-robber
  *
@@ -15,6 +13,14 @@ package com.benonshi.array;
  * @date 2021/1/13 21:00
  */
 public class Rob {
+
+
+    /**
+     * description: dp解法
+     *
+     * @Author: BenOniShi
+     * @Date: 2021/5/5 12:20
+     */
     public static int rob(int[] nums) {
         int n = nums.length;
         if (n == 0) {
@@ -33,6 +39,24 @@ public class Rob {
         }
         return dp[n];
     }
+
+
+    /**
+     * description: 滚动数组解法
+     *
+     * @Author: BenOniShi
+     * @Date: 2021/5/5 12:20
+     */
+    public int rob2(int[] nums) {
+        int pre = 0, cur = 0, tmp;
+        for (int num : nums) {
+            tmp = cur;
+            cur = Math.max(pre + num, cur);
+            pre = tmp;
+        }
+        return cur;
+    }
+
 
     public static void main(String[] args) {
         int[] nums = new int[]{1, 3, 7, 6};
