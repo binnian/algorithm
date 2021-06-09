@@ -1,4 +1,4 @@
-package com.benonshi.node;
+package com.benonshi.tree;
 
 import com.benonshi.model.Node;
 
