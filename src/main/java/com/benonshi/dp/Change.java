@@ -20,7 +20,7 @@ public class Change {
         dp[0] = 1;
         //背包问题
         for (int x : coins) {
-            for (int j = x; j < amount; j++) {
+            for (int j = x; j <= amount; j++) {
                 dp[j] += dp[j - x];
             }
         }
