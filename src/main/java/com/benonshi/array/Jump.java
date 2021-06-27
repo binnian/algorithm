@@ -10,8 +10,6 @@ package com.benonshi.array;
  * <p>
  * 假设你总是可以到达数组的最后一个位置。
  * <p>
- *  
- * <p>
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/jump-game-ii
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
@@ -20,7 +18,7 @@ package com.benonshi.array;
  * @date 2021/6/22 23:47
  */
 public class Jump {
-    public int jump(int[] nums) {
+    public static int jump(int[] nums) {
         int n = nums.length;
         int[] dp = new int[n];
         for (int i = 1, j = 0; i < n; i++) {
@@ -30,5 +28,10 @@ public class Jump {
             dp[i] = dp[j] + 1;
         }
         return dp[n - 1];
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{1, 2, 3, 5, 6, 7, 7, 12};
+        System.out.println(jump(nums));
     }
 }
