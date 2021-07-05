@@ -12,7 +12,7 @@ package com.benonshi.array;
  * @date 2021/6/23 0:03
  */
 public class CanJump {
-    public boolean canJump(int[] nums) {
+    public static boolean canJump(int[] nums) {
         int k = 0;
         for (int i = 0; i < nums.length; i++) {
             // 如果超过了能跳的范围
@@ -23,5 +23,10 @@ public class CanJump {
             k = Math.max(k, i + nums[i]);
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{1, 0, 1, 1, 1, 1, 1, 1, 1, 1};
+        System.out.println(canJump(nums));
     }
 }
