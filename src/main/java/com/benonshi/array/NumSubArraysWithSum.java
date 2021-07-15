@@ -12,12 +12,14 @@ import java.util.Map;
 public class NumSubArraysWithSum {
 
     public int numSubArraysWithSum(int[] nums, int goal) {
-        Map<Integer, Integer> map = new HashMap<>();
         int res = 0, sum = 0;
+        Map<Integer, Integer> map = new HashMap<>();
+        // 若 sum(i,j)区间和为goal ze sum(j) - sum(i) =  goal
         for (int num : nums) {
-            //设置前缀和并更新次数
             map.put(sum, map.getOrDefault(sum, 0) + 1);
+            //前缀累加和
             sum += num;
+            // 累加结果
             res += map.getOrDefault(sum - goal, 0);
         }
         return res;
