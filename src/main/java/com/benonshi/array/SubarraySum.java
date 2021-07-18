@@ -11,26 +11,24 @@ import java.util.Map;
  **/
 public class SubarraySum {
     public static int subarraySum(int[] nums, int k) {
-        int len = nums.length;
         int res = 0;
         int sum = 0;
         // key 为 和  value 子数组的个数
         Map<Integer, Integer> map = new HashMap<>();
         map.put(0, 1);
-        for (int i = 0; i < len; i++) {
-            sum += nums[i];
+        for (int num : nums) {
+            sum += num;
             if (map.containsKey(sum - k)) {
                 res += map.get(sum - k);
             }
             map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
-
         return res;
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 1, 1,1,1,1};
-        int i = subarraySum(nums, 6);
+        int[] nums = new int[]{1,1};
+        int i = subarraySum(nums, 1);
         System.out.println(i);
     }
 }
